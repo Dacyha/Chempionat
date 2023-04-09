@@ -8,7 +8,7 @@ import streamlit as st
 from PIL import Image
 
 def load_model():
-    model = EfficientNetB0(weights = 'imagenet')
+    model = model = Sequential()
     return model
 
 def preprocess_image(img):
@@ -43,3 +43,5 @@ if result:
     preds = model.predict(x)
     st.write('Результат распознавания:')
     print_predictions(preds)
+
+#python -m streamlit run bruh.py
